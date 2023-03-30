@@ -1,0 +1,37 @@
+Starting Laravel development server: http://0.0.0.0:8000
+[Wed Jul 27 02:31:49 2022] PHP 7.4.3 Development Server (http://0.0.0.0:8000) started
+[Wed Jul 27 02:39:53 2022] 222.252.25.61:58289 Accepted
+[Wed Jul 27 02:39:53 2022] 222.252.25.61:58289 Closing
+[Wed Jul 27 02:39:53 2022] 222.252.25.61:58290 Accepted
+[Wed Jul 27 02:39:53 2022] 222.252.25.61:58290 Closing
+[Wed Jul 27 02:42:19 2022] 222.252.25.61:58404 Accepted
+[Wed Jul 27 02:42:19 2022] 222.252.25.61:58404 Closing
+[Wed Jul 27 02:42:19 2022] 222.252.25.61:58406 Accepted
+[Wed Jul 27 02:42:19 2022] 222.252.25.61:58406 Closing
+[Wed Jul 27 02:42:20 2022] 222.252.25.61:58407 Accepted
+[Wed Jul 27 02:42:20 2022] 222.252.25.61:58407 Closing
+[Wed Jul 27 02:42:20 2022] 222.252.25.61:58408 Accepted
+[Wed Jul 27 02:42:20 2022] 222.252.25.61:58408 Closing
+[Wed Jul 27 02:42:20 2022] 222.252.25.61:58409 Accepted
+[Wed Jul 27 02:42:20 2022] 222.252.25.61:58409 Closing
+[Wed Jul 27 02:42:20 2022] 222.252.25.61:58410 Accepted
+[Wed Jul 27 02:42:20 2022] 222.252.25.61:58410 Closing
+[Wed Jul 27 02:42:20 2022] 222.252.25.61:58411 Accepted
+[Wed Jul 27 02:42:20 2022] 222.252.25.61:58411 Closing
+[Wed Jul 27 02:42:20 2022] 222.252.25.61:58412 Accepted
+[Wed Jul 27 02:42:20 2022] 222.252.25.61:58412 Closing
+[Wed Jul 27 02:42:20 2022] 222.252.25.61:58413 Accepted
+[Wed Jul 27 02:47:54 2022] 222.252.25.61:58413 Closed without sending a request; it was probably just an unused speculative preconnection
+[Wed Jul 27 02:47:54 2022] 222.252.25.61:58413 Closing
+[Wed Jul 27 02:53:02 2022] 222.252.25.61:58747 Accepted
+[Wed Jul 27 02:53:02 2022] 222.252.25.61:58747 Closing
+[Wed Jul 27 02:53:02 2022] 222.252.25.61:58749 Accepted
+[Wed Jul 27 02:53:02 2022] 222.252.25.61:58748 Accepted
+[Wed Jul 27 02:53:02 2022] 222.252.25.61:58748 Closing
+[Wed Jul 27 02:53:02 2022] 222.252.25.61:58749 Closing
+[Wed Jul 27 02:53:02 2022] 222.252.25.61:58750 Accepted
+[Wed Jul 27 02:53:02 2022] 222.252.25.61:58750 Closing
+[Wed Jul 27 02:53:02 2022] 222.252.25.61:58751 Accepted
+[Wed Jul 27 02:53:02 2022] 222.252.25.61:58751 Closing
+[Wed Jul 27 02:53:02 2022] 222.252.25.61:58752 Accepted
+[Wed Jul 27 02:53:02 2022] 222.252.25.61:58752 Closing

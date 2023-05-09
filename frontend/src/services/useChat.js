@@ -46,18 +46,11 @@ const useChat = ({projectId, user, receiverFlag}) => {
     };
   }, [projectId]);
 
-<<<<<<< HEAD
-  const getMessages = ({projectId, user}) => {
-    socketRef.current.emit(JOIN_CHAT, {
-      projectId: projectId,
-      user: user
-=======
   const getMessages = ({projectId, user, receiverFlag}) => {
     socketRef.current.emit(JOIN_CHAT, {
       projectId: projectId,
       user: user,
       receiverFlag: receiverFlag,
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
     })
   };
 

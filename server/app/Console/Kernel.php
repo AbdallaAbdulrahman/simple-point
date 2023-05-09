@@ -16,11 +16,6 @@ class Kernel extends ConsoleKernel
         //
         Commands\DemoCron::class,
         Commands\AutoTicketing::class,
-<<<<<<< HEAD
-=======
-        Commands\AutoSendReminder::class,
-        Commands\AutoSendThirdReminder::class,
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
     ];
 
     /**
@@ -34,12 +29,6 @@ class Kernel extends ConsoleKernel
         // $schedule->command('demo:cron')->everyMinute();
         $schedule->command('auto-ticketing')->hourly();
         $schedule->command('auto-year-plan')->yearly();
-<<<<<<< HEAD
-=======
-
-        $schedule->command('send-second-reminder')->daily();
-        $schedule->command('send-third-reminder')->daily();
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
     }
 
     /**

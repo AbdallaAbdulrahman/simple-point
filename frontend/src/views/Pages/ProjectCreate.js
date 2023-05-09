@@ -149,21 +149,18 @@ const ProposalCreate = ({history, user}) => {
       workDays += (inputdata1 <= 20) ? 0 : Math.ceil((inputdata1 - 20) / 10);
     }
     const steps1 = [2,3,3,2,3];
-<<<<<<< HEAD
     const steps2 = [2,2,1,2,2,1,2,2,2,1];
     const steps3 = [2,1];
     const steps4 = [1,1,1,2];
 
-=======
-    const steps2 = [2,2,2,2,2,1,2,2,2,1];
-    const steps3 = [2,2,1,2,2,1,2,2,2,1];
-    const steps4 = [1,1,1,2];
+    // const steps2 = [2,2,2,2,2,1,2,2,2,1];
+    // const steps3 = [2,2,1,2,2,1,2,2,2,1];
+    // const steps4 = [1,1,1,2];
 
-    const stepsA1000 = [2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,2,2]; // for A rank Scale 1000
-    const stepsB1000 = [2,1,1,2,1,2]
-    const stepsC1000 = [1,1,1,2,1,1,2,1,1,2,1];
+    // const stepsA1000 = [2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,2,2]; // for A rank Scale 1000
+    // const stepsB1000 = [2,1,1,2,1,2]
+    // const stepsC1000 = [1,1,1,2,1,1,2,1,1,2,1];
 
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
     simplified_drawing_price = 0;
     if (checked.indexOf(2) >= 0) {
       var step = Math.floor((inputdata2 - 1) / 5);
@@ -171,20 +168,17 @@ const ProposalCreate = ({history, user}) => {
         switch (selectedValue) {
           case '1':
             simplified_drawing_price += 300000;
-<<<<<<< HEAD
             workDays += 10;
             if (step > 0) {
               simplified_drawing_price += (75000 + (step - 1) * 150000);
               /* 2 3 3 2 3 */
               workDays += 1;
-=======
-            // workDays += 15;
-            workDays +=29;
-            if (step > 0) {
-              simplified_drawing_price += (75000 + (step - 1) * 150000);
-              /* 2 3 3 2 3 */
-              workDays += 2;
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
+            // // workDays += 15;
+            // workDays +=29;
+            // if (step > 0) {
+            //   simplified_drawing_price += (75000 + (step - 1) * 150000);
+            //   /* 2 3 3 2 3 */
+            //   workDays += 2;
               step -= 1;
               var i = 0;
               while (step > 0) {
@@ -196,39 +190,33 @@ const ProposalCreate = ({history, user}) => {
             break;
           case '2':
             simplified_drawing_price += 240000;
-<<<<<<< HEAD
             workDays += 7;
             if (step > 0) {
               simplified_drawing_price += (60000 + (step - 1) * 120000);
               /* 2 */
               workDays += (1 + (step - 1) * 2);
-=======
-            workDays += 27;
-            if (step > 0) {
-              simplified_drawing_price += (60000 + (step - 1) * 120000);
-              /* 2 */
-              // workDays += (1 + (step - 1) * 2);
+            // workDays += 27;
+            // if (step > 0) {
+            //   simplified_drawing_price += (60000 + (step - 1) * 120000);
+            //   /* 2 */
+            //   // workDays += (1 + (step - 1) * 2);
 
-              // New Added 28/7/2022 by william
-              workDays += 1;
-              step -= 1;
-              var i = 0;
-              while (step > 0) {
-                workDays += steps2[i];
-                step -= 1;
-                i = i == steps1.length - 1 ? 0 : i + 1;
-              }
-              // New Added 28/7/2022 by william
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
+            //   // New Added 28/7/2022 by william
+            //   workDays += 1;
+            //   step -= 1;
+            //   var i = 0;
+            //   while (step > 0) {
+            //     workDays += steps2[i];
+            //     step -= 1;
+            //     i = i == steps1.length - 1 ? 0 : i + 1;
+            //   }
+            //   // New Added 28/7/2022 by william
             }
             break;
           case '3':
             simplified_drawing_price += 204000;
-<<<<<<< HEAD
             workDays += 6;
-=======
-            workDays += 26;
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
+            // workDays += 26;
             if (step > 0) {
               simplified_drawing_price += (51000 + (step - 1) * 102000);
               /* 2 2 1 2 2 1 2 2 2 1 */
@@ -236,15 +224,12 @@ const ProposalCreate = ({history, user}) => {
               step -= 1;
               var i = 0;
               while (step > 0) {
-<<<<<<< HEAD
                 workDays += steps2[i];
                 step -= 1;
                 i = i == steps2.length - 1 ? 0 : i + 1;
-=======
-                workDays += steps3[i];
-                step -= 1;
-                i = i == steps3.length - 1 ? 0 : i + 1;
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
+                // workDays += steps3[i];
+                // step -= 1;
+                // i = i == steps3.length - 1 ? 0 : i + 1;
               }
             }
             break;
@@ -254,39 +239,33 @@ const ProposalCreate = ({history, user}) => {
         switch (selectedValue) {
           case '1':
             simplified_drawing_price += 180000;
-<<<<<<< HEAD
             workDays += 7;
             if (step > 0) {
               simplified_drawing_price += (45000 + (step - 1) * 75000);
               /* 2 */
               workDays += (1 + (step - 1) * 2);
-=======
-            workDays += 27;
-            if (step > 0) {
-              simplified_drawing_price += (45000 + (step - 1) * 75000);
-              /* 2 */
-              // workDays += (1 + (step - 1) * 2);
+            // workDays += 27;
+            // if (step > 0) {
+            //   simplified_drawing_price += (45000 + (step - 1) * 75000);
+            //   /* 2 */
+            //   // workDays += (1 + (step - 1) * 2);
 
-              // New Added 28/7/2022 by william
-              workDays += 1;
-              step -= 1;
-              var i = 0;
-              while (step > 0) {
-                workDays += stepsA1000[i];
-                step -= 1;
-                i = i == stepsA1000.length - 1 ? 0 : i + 1;
-              }
-              // New Added 28/7/2022 by william
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
+            //   // New Added 28/7/2022 by william
+            //   workDays += 1;
+            //   step -= 1;
+            //   var i = 0;
+            //   while (step > 0) {
+            //     workDays += stepsA1000[i];
+            //     step -= 1;
+            //     i = i == stepsA1000.length - 1 ? 0 : i + 1;
+            //   }
+            //   // New Added 28/7/2022 by william
             }
             break;
           case '2':
             simplified_drawing_price += 144000;
-<<<<<<< HEAD
             workDays += 5;
-=======
-            workDays += 25;
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
+            // workDays += 25;
             if (step > 0) {
               simplified_drawing_price += (36000 + (step - 1) * 60000);
               /* 2 1 */
@@ -294,25 +273,19 @@ const ProposalCreate = ({history, user}) => {
               step -= 1;
               var i = 0;
               while (step > 0) {
-<<<<<<< HEAD
                 workDays += steps3[i];
                 step -= 1;
                 i = i == steps3.length - 1 ? 0 : i + 1;
-=======
-                workDays += stepsB1000[i];
-                step -= 1;
-                i = i == stepsB1000.length - 1 ? 0 : i + 1;
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
+                // workDays += stepsB1000[i];
+                // step -= 1;
+                // i = i == stepsB1000.length - 1 ? 0 : i + 1;
               }
             }
             break;
           case '3':
             simplified_drawing_price += 122400;
-<<<<<<< HEAD
             workDays += 5;
-=======
-            workDays += 25;
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
+            // workDays += 25;
             if (step > 0) {
               simplified_drawing_price += (30600 + (step - 1) * 51000);
               /* 1 1 1 2 */
@@ -320,19 +293,16 @@ const ProposalCreate = ({history, user}) => {
               step -= 1;
               var i = 0;
               while (step > 0) {
-<<<<<<< HEAD
                 workDays += steps4[i];
                 step -= 1;
                 i = i == steps4.length - 1 ? 0 : i + 1;
               }
-=======
-                workDays += stepsC1000[i];
-                step -= 1;
-                i = i == stepsC1000.length - 1 ? 0 : i + 1;
-                console.log(stepsC1000[i], "--looping workday")
-              }
-              console.log(workDays, "--workdays")
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
+              //   workDays += stepsC1000[i];
+              //   step -= 1;
+              //   i = i == stepsC1000.length - 1 ? 0 : i + 1;
+              //   console.log(stepsC1000[i], "--looping workday")
+              // }
+              // console.log(workDays, "--workdays")
             }
             break;
         }

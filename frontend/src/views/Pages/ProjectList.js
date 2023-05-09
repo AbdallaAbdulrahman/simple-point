@@ -76,25 +76,6 @@ const ProjectList = ({user}) => {
         );
       });
 
-<<<<<<< HEAD
-      const assignButtons = (id, bizId) => [
-        { color: "rose"},
-      ].map((prop, key) => {
-        return (
-          <Button2
-            color={prop.color}
-            simple
-            key={key}
-            onClick={(e) => {
-              e.stopPropagation()
-              clickOpenAssignModal(id)
-            }}
-            disabled = {bizId != null}
-          >
-           割当
-          </Button2>
-        );
-=======
       const assignButtons = (id, bizId, projectStatus) => [
         { color: "rose"},
       ].map((prop, key) => {
@@ -130,7 +111,6 @@ const ProjectList = ({user}) => {
           );
         }
         
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
       });
     
       const removeButtons = (id) => [
@@ -162,11 +142,7 @@ const ProjectList = ({user}) => {
 
     const clickOpenAssignModal = (id) => {
       setProjectId(id);
-<<<<<<< HEAD
-
-=======
       
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
       setAssignProjectModal(true);
     }
 
@@ -235,11 +211,7 @@ const ProjectList = ({user}) => {
             setProjectsTableData(res.data.projects.map((project, index) => {
                 switch (user.roles[0].id) {
                     case 1:   // Admin
-<<<<<<< HEAD
-                        return [index+1, project.title, project.company, currencyPrettyPrint(project.amount),  project.created_date, project.delivery_date, project.status, assignButtons(project.id, project.business_id), removeButtons(project.id),
-=======
                         return [index+1, project.title, project.company, currencyPrettyPrint(project.amount),  project.created_date, project.delivery_date, project.status, assignButtons(project.id, project.business_id, project.status), removeButtons(project.id),
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
                         <Button2
                         color="rose"
                         simple
@@ -255,22 +227,6 @@ const ProjectList = ({user}) => {
                         project.id
                       ]
                     case 2:   // Client
-<<<<<<< HEAD
-                        return [index+1, project.title, currencyPrettyPrint(project.amount), project.created_date, project.delivery_date, orderButtons(project.id), invoiceButtons(project.id, project.status), project.status,
-                        <Button2
-                        color="rose"
-                        simple
-                          onClick={() => {
-                            let obj = res.data.projects.find(o => o.id === project.id);
-                            // history.push("/admin/projectdetail/" + obj.id + "");
-                            history.push({
-                              pathname: "/admin/projectdetail/" + obj.id,
-                              state: obj.id
-                            });
-                          }}
-                        >詳細</Button2>,
-                        project.id
-=======
                         return [
                           index+1, 
                           project.title, 
@@ -294,7 +250,6 @@ const ProjectList = ({user}) => {
                             >詳細
                           </Button2>,
                           project.id
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
                       ]
                     case 3:   // Business
                         return [index+1, project.title, project.created_date, project.delivery_date, project.status,
@@ -347,10 +302,7 @@ const ProjectList = ({user}) => {
 
     return (
         <div>
-<<<<<<< HEAD
-=======
             {/* modal when click 割当 / Allocation */}
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
             <Dialog
               classes={{
                 root: classes.center + " " + classes.modalRoot,
@@ -394,10 +346,7 @@ const ProjectList = ({user}) => {
               </DialogContent>
             </Dialog>
 
-<<<<<<< HEAD
-=======
             {/* modal when click Delete Modal */}
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
             <Dialog
               open={deleteProjectModal}
               TransitionComponent={Transition}

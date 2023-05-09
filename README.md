@@ -1,17 +1,16 @@
-Simple Point
-=================
-
-
+# Simple Point
 
 ## Required
-* PHP version 7.4.3
-* Composer version 2.1.5
-* Nodejs version 10.19.0
-* Npm version 6.14.4
+
+- PHP version 7.4.3
+- Composer version 2.1.5
+- Nodejs version 10.19.0
+- Npm version 6.14.4
 
 ## Options
-* PM2 version 5.1.0 (recomment using on staging environment)
-* MySQL server
+
+- PM2 version 5.1.0 (recomment using on staging environment)
+- MySQL server
 
 ## Local development environment
 
@@ -45,21 +44,22 @@ $ cd frontend/ && npm install
 $ cd chat-server/ && npm install
 ```
 
-6. Config database for api server in *`server/.env`* file:
+6. Config database for api server in _`server/.env`_ file:
 
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
-DB_PORT=3306
+DB_PORT=3306cd
 DB_DATABASE=project_db
 DB_USERNAME=root
 DB_PASSWORD=
 ```
+
 ```shell
 $ cd server && php artisan migrate
 ```
 
-7. Config database for chat server in *`chat-server/mysql.js`*:
+7. Config database for chat server in _`chat-server/mysql.js`_:
 
 ```
 module.exports = {
@@ -99,7 +99,9 @@ $ cd frontend/ && npm build && npm start
 ```shell
 "start": "react-scripts start"
 ```
+
 to
+
 ```shell
 "start": "PORT=80 react-scripts start"
 ```

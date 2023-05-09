@@ -21,36 +21,11 @@ const ChatContent = (props) => {
   const classes = useStyles();
 
   const projectId = props.projectId;
-<<<<<<< HEAD
-  const adminId = props.adminId;
-  const clientId = props.clientId;
-  const businessId = props.businessId;
-  const userRole = props.user.roles[0];
   
-  const [receiverId, setReceiverId] = React.useState(0);
-=======
-  
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
   const [newMessage, setNewMessage] = React.useState("");
   const [receiverFlag, setReceiverFlag] = React.useState(true);
   const { messages, sendMessage, getMessages } = useChat({projectId: projectId, user: props.user, receiverFlag: receiverFlag});
 
-<<<<<<< HEAD
-  useEffect(() => {
-    getMessages({projectId: projectId, user: props.user});
-    if (userRole && userRole.name !== 'Admin') {
-      setReceiverId(adminId);
-    } else {
-      if (receiverFlag) {
-        setReceiverId(clientId);
-      } else {
-        setReceiverId(businessId);
-      }
-    }
-  }, [])
-  
-=======
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
   const handleNewMessageChange = (event) => {
     setNewMessage(event.target.value);
   };
@@ -69,20 +44,9 @@ const ChatContent = (props) => {
     }
   };
 
-<<<<<<< HEAD
-  const handleTabChange = (e) => {
-    if (e.target.textContent === '事業者') {
-      setReceiverFlag(false);
-      setReceiverId(businessId);
-    } else {
-      setReceiverFlag(true);
-      setReceiverId(clientId);
-    }
-=======
   const handleTabChange = () => {
     setReceiverFlag(!receiverFlag);
     getMessages({projectId: projectId, user: props.user, receiverFlag: !receiverFlag})
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
   };
 
   const getDate = (date, format) => {
@@ -130,27 +94,6 @@ const ChatContent = (props) => {
               <div style={{ width: "100%" }}>
                 <div className={classes.chatWindow}>
                   <List component="nav">
-<<<<<<< HEAD
-                    {messages.map((message, i) => {
-                      if (message.ufrom === receiverId || message.uto === receiverId) {
-                        return (
-                          <span key={i}>
-                            <ListItem
-                              key={i}
-                              className={`message-item ${
-                                message.ufrom === props.user.id ? "my-message" : "received-message"
-                              }`}
-                            >
-                              <ListItemText primary={message.message} />
-                            </ListItem>
-                            <div className={`${message.ufrom === props.user.id ? "my-time-message" : "received-time-message"}`}>
-                              {newFormatOfMessageTime(message.created_at)}
-                            </div>
-                          </span>
-                        );
-                      }
-                    })}
-=======
                     {messages.map((message, i) => (
                       <span key={i}>
                         <ListItem
@@ -166,7 +109,6 @@ const ChatContent = (props) => {
                         </div>
                       </span>
                     ))}
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
                   </List>
                 </div>
                 <div style={{ marginTop: "10px" }}>
@@ -196,27 +138,6 @@ const ChatContent = (props) => {
               <div style={{ width: "100%" }}>
                 <div className={classes.chatWindow}>
                   <List component="nav">
-<<<<<<< HEAD
-                    {messages.map((message, i) => {
-                      if (message.ufrom === receiverId || message.uto === receiverId) {
-                        return (
-                          <div key={i}>
-                            <ListItem
-                              key={i}
-                              className={`message-item ${
-                                message.ufrom === props.user.id ? "my-message" : "received-message"
-                              }`}
-                            >
-                              <ListItemText primary={message.message} />
-                            </ListItem>
-                            <div className={`${message.ufrom === props.user.id ? "my-time-message" : "received-time-message"}`}>
-                              {newFormatOfMessageTime(message.created_at)}
-                            </div>
-                          </div>
-                        );
-                      }
-                    })}
-=======
                     {messages.map((message, i) => (
                       <div key={i}>
                         <ListItem
@@ -232,7 +153,6 @@ const ChatContent = (props) => {
                         </div>
                       </div>
                     ))}
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
                   </List>
                 </div>
                 <div style={{ marginTop: "10px" }}>
@@ -261,27 +181,6 @@ const ChatContent = (props) => {
         <div style={{ width: "100%" }}>
           <div className={classes.chatWindow}>
             <List component="nav">
-<<<<<<< HEAD
-              {messages.map((message, i) => {
-                if (message.ufrom === receiverId || message.uto === receiverId) {
-                  return (
-                    <div key={i}>
-                      <ListItem
-                        key={i}
-                        className={`message-item ${
-                          message.ufrom === props.user.id ? "my-message" : "received-message"
-                        }`}
-                      >
-                        <ListItemText primary={message.message} />
-                      </ListItem>
-                      <div className={`${message.ufrom === props.user.id ? "my-time-message" : "received-time-message"}`}>
-                        {newFormatOfMessageTime(message.created_at)}
-                      </div>
-                    </div>
-                  )
-                }
-              })}
-=======
               {messages.map((message, i) => (
                 <div key={i}>
                   <ListItem
@@ -297,7 +196,6 @@ const ChatContent = (props) => {
                   </div>
                 </div>
               ))}
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
             </List>
           </div>
           <div style={{ marginTop: "10px" }}>

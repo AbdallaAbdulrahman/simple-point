@@ -62,21 +62,12 @@ const TimelineContent = ( props) => {
   const [requestDataLink, setRequestDataLink] = React.useState([]);
   const [deliveryDataLink, setDeliveryDataLink] = React.useState([]);
   const [projDetail, setProjDetail] = React.useState([]);
-<<<<<<< HEAD
-  const [adminId, setAdminId] = React.useState("");
-=======
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
   const [clientId, setClientId] = React.useState("");
   const [businessId, setBusinessId] = React.useState("");
 
   const [inProgress, setInProgress] = React.useState(false);
 
   const [show, setShow] = useState(false);
-<<<<<<< HEAD
-  const [showButtonUpload, setShowButtonUpload] = useState(false);
-  const [showButtonDeliveryUpload, setShowButtonDeliveryUpload] = useState(false);
-=======
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
   const [place, setPlace] = useState('br');
   const [message, setMessage] = useState('');
   const [alertStatus, setStatus] = useState('success');
@@ -124,14 +115,6 @@ const TimelineContent = ( props) => {
         // setRequestDataCount(requestData.length);
         // setRequestDataLink(requestData.map(a => a.request_data_link));
         setRequestDataLink(requestData);
-<<<<<<< HEAD
-        if (requestData.length < 10) {
-          setShowButtonUpload(true);
-        } else {
-          setShowButtonUpload(false);
-        }
-=======
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
       }
     }).catch((err)=>{
       console.log(err);
@@ -147,14 +130,6 @@ const TimelineContent = ( props) => {
         // setDeliveryDataCount(DeliveryData.length);
         // setDeliveryDataLink(DeliveryData.map(a => a.Delivery_data_link));
         setDeliveryDataLink(deliveryData);
-<<<<<<< HEAD
-        if (deliveryData.length < 10) {
-          setShowButtonDeliveryUpload(true);
-        } else {
-          setShowButtonDeliveryUpload(false);
-        }
-=======
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
       }
     }).catch((err)=>{
       console.log(err);
@@ -210,10 +185,6 @@ const TimelineContent = ( props) => {
         setProjectTitle(prj.title);
         setDeliveryDate(prj.delivery_date);
         fillDetail(prj.detail);
-<<<<<<< HEAD
-        setAdminId(prj.admin_id);
-=======
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
         setClientId(prj.client_id);
         setBusinessId(prj.business_id);
         setProjectOrderFilename(prj.purchase_order_link);
@@ -350,41 +321,6 @@ const TimelineContent = ( props) => {
     })
   }
 
-<<<<<<< HEAD
-  const handleClickButtonUpload = () => {
-    let inputElements = document.querySelectorAll('.input-upload');
-    let currentInput = document.createElement("input");
-    let indexButton = `requestData${inputElements.length}`;
-    currentInput.id = indexButton;
-    currentInput.type = "file";
-    currentInput.className = "input-upload";
-    currentInput.hidden = true;
-    currentInput.multiple = false;
-    currentInput.onchange = function (e) {
-      submitRequestData(e, indexButton);
-    };
-    document.body.appendChild(currentInput);
-    document.getElementById(indexButton).click();
-  }
-
-  const handleClickDeliveryUpload = () => {
-    let inputElements = document.querySelectorAll('.input-upload-delivery');
-    let currentInput = document.createElement("input");
-    let indexButton = `requestDelivery${inputElements.length}`;
-    currentInput.id = indexButton;
-    currentInput.type = "file";
-    currentInput.className = "input-upload-delivery";
-    currentInput.hidden = true;
-    currentInput.multiple = false;
-    currentInput.onchange = function (e) {
-      submitDeliveryData(e, indexButton);
-    };
-    document.body.appendChild(currentInput);
-    document.getElementById(indexButton).click();
-  }
-
-=======
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
   const submitRequestData = (e, indexButton) => {
     const file = e.target.files[0];
     submitUploadData(file, 0, indexButton);
@@ -405,13 +341,7 @@ const TimelineContent = ( props) => {
       }
       percentageButtons.push({[indexButton]: 5, textButton: 'アップロード中 (' + fullNameFile + ')'});
       setPercentUploadButton(percentageButtons);
-<<<<<<< HEAD
-      setIndexUploadButton(uploadButtons.filter(onlyUnique));
-      setShowButtonUpload(checkLengthOfFiles('count-files'));
-      setShowButtonDeliveryUpload(checkLengthOfFiles('count-delivery-files'));
-=======
       setIndexUploadButton([...indexUploadButton, indexButton]);
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
       uploadFileToS3(file, type, indexButton);
     }
   }
@@ -435,21 +365,6 @@ const TimelineContent = ( props) => {
     return true;
   }
 
-<<<<<<< HEAD
-  const onlyUnique = (value, index, self) => {
-    return self.indexOf(value) === index;
-  }
-
-  const checkLengthOfFiles = (className) => {
-    let listFile = document.querySelectorAll('.' + className);
-    if (listFile.length < 10) {
-      return true;
-    }
-    return false;
-  }
-
-=======
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
   const uploadFileToS3 = (file, type, indexButton) => {
     const formFileData = new FormData();
     formFileData.append('fileSize', file.size);
@@ -556,10 +471,6 @@ const TimelineContent = ( props) => {
     });
     percentageButtons = clearObjects;
     setPercentUploadButton(clearObjects);
-<<<<<<< HEAD
-    document.getElementById(indexButton).remove();
-=======
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
   }
 
   const clearDownloadUpload = (number) => {
@@ -612,11 +523,7 @@ const TimelineContent = ( props) => {
 
   const classes = useStyles();
  
-<<<<<<< HEAD
-  const UploadedRequestButtons = () => {
-=======
   const UploadRequestButtons = () => {
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
     return requestDataLink.map((data, index) => {
       let number = 'downloadRequestData' + (index + 1);
       let fullNameFile = data.request_data_link;
@@ -625,11 +532,7 @@ const TimelineContent = ( props) => {
         fullNameFile = fullNameFile.replace(strNeedReplace, '...');
       }
       return (
-<<<<<<< HEAD
-        <div className={classes.flexContent + ' count-files'} key={index}>
-=======
         <div className={classes.flexContent} key={index}>
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
           <Button style={{ backgroundColor: "lightgrey", color: "blue", padding: "10px 25px", textTransform: "none"}}
                   onClick={() => downloadRequestData(data.id, data.request_data_link, number)}
                   disabled={indexDownloadButton.includes(number)}
@@ -646,22 +549,6 @@ const TimelineContent = ( props) => {
     });
   }
 
-<<<<<<< HEAD
-  const UploadingRequestButtons = () => {
-    let a = indexUploadButton.filter((el) => {
-      return el.includes('requestData');
-    });
-    return a.map((item, index) => {
-      let objIndex = percentUploadButton.findIndex(key => Object.keys(key).includes(item));
-      return (
-        <div className={classes.flexContent + ' count-files'} key={index}>
-          <Button
-            style={{ backgroundColor: "lightgrey", color: "black", padding: "10px 25px" }}
-            disabled={true}>
-            {percentUploadButton[objIndex].textButton}
-            <span className={classes.percentage} style={{ width: (objIndex >= 0 && indexUploadButton.includes(item) ? percentUploadButton[objIndex][item] : 0) + "%" }}></span>
-          </Button>
-=======
   const NewUploadRequestButtons = (props) => {
     const { count } = props;
     let max = 10 - count;
@@ -683,30 +570,12 @@ const TimelineContent = ( props) => {
             <span className={classes.percentage} style={{ width: (objIndex >= 0 && indexUploadButton.includes(number) ? percentUploadButton[objIndex][number] : 0) + "%" }}></span>
           </Button>
           <input id={'uploadRequestButton' + number} onChange={(e) => submitRequestData(e, number)} multiple={false} type='file' hidden disabled={indexUploadButton.includes(number)}/>
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
         </div>
       )
     });
   }
-<<<<<<< HEAD
-
-  const UploadRequestButtons = () => {
-    return (
-      <div className={classes.flexContent}>
-        <Button
-          style={{ backgroundColor: "lightgrey", color: "black", padding: "10px 25px" }}
-          onClick={handleClickButtonUpload} >
-          アップロード
-        </Button>
-      </div>
-    )
-  }
- 
-  const UploadedDeliveryButtons = () => {
-=======
  
   const UploadDeliveryButtons = () => {
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
     return deliveryDataLink.map((data, index) => {
       let number = 'downloadDeliveryData' + (index + 1);
       let fullNameFile = data.deliverable_data_link;
@@ -715,11 +584,7 @@ const TimelineContent = ( props) => {
         fullNameFile = fullNameFile.replace(strNeedReplace, '...');
       }
       return (
-<<<<<<< HEAD
-        <div className={classes.flexContent  + ' count-delivery-files'} key={index}>
-=======
         <div className={classes.flexContent} key={index}>
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
           <Button style={{ backgroundColor: "lightgrey", color: "blue", padding: "10px 25px", textTransform: "none" }}
                   onClick={() => downloadDeliveryData(data.id, data.deliverable_data_link, number)}
                   disabled={indexDownloadButton.includes(number)}
@@ -736,22 +601,6 @@ const TimelineContent = ( props) => {
     });
   }
 
-<<<<<<< HEAD
-  const UploadingDeliveryButtons = () => {
-    let a = indexUploadButton.filter((el) => {
-      return el.includes('requestDelivery');
-    });
-    return a.map((item, index) => {
-      let objIndex = percentUploadButton.findIndex(key => Object.keys(key).includes(item));
-      return (
-        <div className={classes.flexContent + ' count-delivery-files'} key={index}>
-          <Button
-            style={{ backgroundColor: "lightgrey", color: "black", padding: "10px 25px" }}
-            disabled={true}>
-            {percentUploadButton[objIndex].textButton}
-            <span className={classes.percentage} style={{ width: (objIndex >= 0 && indexUploadButton.includes(item) ? percentUploadButton[objIndex][item] : 0) + "%" }}></span>
-          </Button>
-=======
   const NewUploadDeliveryButtons = (props) => {
     const { count } = props;
     let max = 10 - count;
@@ -773,27 +622,11 @@ const TimelineContent = ( props) => {
             <span className={classes.percentage} style={{ width: (objIndex >= 0 && indexUploadButton.includes(number) ? percentUploadButton[objIndex][number] : 0) + "%" }}></span>
           </Button>
           <input id={'uploadDeliveryButton' + number} onChange={(e) => submitDeliveryData(e, number)} multiple={false} type='file' hidden disabled={indexUploadButton.includes(number)}/>
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
         </div>
       )
     });
   }
 
-<<<<<<< HEAD
-  const UploadDeliveryButtons = () => {
-    return (
-      <div className={classes.flexContent}>
-        <Button
-          style={{ backgroundColor: "lightgrey", color: "black", padding: "10px 25px" }}
-          onClick={handleClickDeliveryUpload} >
-          アップロード
-        </Button>
-      </div>
-    )
-  }
-
-=======
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
   return (
     user.roles == null ? <div /> :
     <div>
@@ -905,17 +738,6 @@ const TimelineContent = ( props) => {
                 </GridItem>
                 <GridItem xs={12} sm={3}>
                   <b>依頼データ</b>
-<<<<<<< HEAD
-                  <UploadedRequestButtons />
-                  {user.roles[0].id <= 2 && <UploadingRequestButtons />}
-                  {showButtonUpload && user.roles[0].id <= 2 && <UploadRequestButtons />}
-                </GridItem>
-                <GridItem xs={12} sm={3}>
-                  <b>成果物データ</b>
-                  <UploadedDeliveryButtons />
-                  {user.roles[0].id !== 2 && <UploadingDeliveryButtons />}
-                  {showButtonDeliveryUpload && user.roles[0].id !== 2 && <UploadDeliveryButtons />}
-=======
                   <UploadRequestButtons />
                   {user.roles[0].id <= 2 && <NewUploadRequestButtons count={requestDataLink.length} />}
                 </GridItem>
@@ -923,7 +745,6 @@ const TimelineContent = ( props) => {
                   <b>成果物データ</b>
                   <UploadDeliveryButtons />
                   {user.roles[0].id !== 2 && <NewUploadDeliveryButtons count={deliveryDataLink.length} />}
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
                 </GridItem>
                 {user.roles[0].id == 3 &&
                 <GridItem xs={12} sm={3}>
@@ -940,15 +761,6 @@ const TimelineContent = ( props) => {
               <p>※ ファイルは .zip や .rar などに圧縮するようにお願いします</p>
             </div>  
             <div className={classes.underline}></div>
-<<<<<<< HEAD
-            {chatting ? (
-              <GridContainer justify="center">
-                <ChatContent projectId={projectId} adminId={adminId} clientId={clientId} businessId={businessId} />
-              </GridContainer>
-            ) : (
-             <div />
-            )}
-=======
             {/* {chatting ? (
               <GridContainer justify="center">
                 <ChatContent projectId = {projectId} />
@@ -956,7 +768,6 @@ const TimelineContent = ( props) => {
             ) : (
              <div />
             )} */}
->>>>>>> 8a42e00a9af7f07e86a02141368fed3b67471b95
           </div>
           <Snackbar
             place={place}

@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^1.13.5",
     "dotenv": "^16.0.1",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.4",
